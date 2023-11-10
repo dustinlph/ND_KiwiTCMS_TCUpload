@@ -108,7 +108,7 @@ class TCCreator:
     def result_write(self, dict_value):
         list_filename = dict_value['file_name'].split('.')
         str_result_file = list_filename[0] + '_TC_result.txt'
-        str_file_path = os.path.join(os.getcwd(), 'result', str_result_file)
+        str_file_path = os.path.join(os.getcwd(), 'results', str_result_file)
         obj_file = open(str_file_path, 'w')
         obj_file.write(str(dict_value['tc_result']))
         obj_file.close()
