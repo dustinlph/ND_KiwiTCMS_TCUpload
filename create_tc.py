@@ -39,13 +39,9 @@ class TCCreator:
         list_pre_data = dict_value['rawdata']
         list_final_data = []
         for tc in range(1, len(list_pre_data)):
-            dict_temp = {}
-            dict_temp['product'] = int(list_pre_data[tc][0])
-            dict_temp['category'] = int(list_pre_data[tc][1])
-            dict_temp['summary'] = list_pre_data[tc][2]
-            dict_temp['text'] = list_pre_data[tc][3]
-            dict_temp['case_status'] = int(list_pre_data[tc][4])
-            dict_temp['priority'] = int(list_pre_data[tc][5])
+            dict_temp = {'product': int(list_pre_data[tc][0]), 'category': int(list_pre_data[tc][1]),
+                         'summary': list_pre_data[tc][2], 'text': list_pre_data[tc][3],
+                         'case_status': int(list_pre_data[tc][4]), 'priority': int(list_pre_data[tc][5])}
             list_final_data.append(dict_temp)
         return list_final_data
 
